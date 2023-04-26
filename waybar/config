@@ -1,0 +1,118 @@
+{
+  "modules-left": [
+    "custom/launcher",
+    "river/tags",
+    "sway/workspaces",
+    "temperature",
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "backlight",
+    "memory",
+    "cpu",
+    "network",
+    "battery",
+    "custom/powermenu",
+    "tray"
+  ],
+  "custom/launcher": {
+//  "format": " ",
+    "format": " ",
+    "on-click": "~/.config/wofi/launcher.sh",
+    "tooltip": false
+  },
+  "sway/workspaces": {
+    "disable-scroll": true,
+  },
+  "river/tags": {
+    "num-tags": 9
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    },
+    "tooltip": false
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "on-scroll-up": "light -A 5",
+    "on-scroll-down": "light -U 5",
+    "format": "{icon} {percent}%",
+    "format-icons": ["","","",""]
+  },
+  "pulseaudio": {
+    "scroll-step": 1,
+    "format": "{icon} {volume}%", 
+    "format-muted": "婢 Muted",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "states": {
+      "warning": 85,
+    },
+    "scroll-step": 1,
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "tooltip": false,
+  },
+  "battery": {
+    "interval": 10,
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "format-full": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "tooltip": false
+  },
+  "clock": {
+    "interval": 1,
+    "format": "{:%I:%M %p  %A %b %d}",
+    "tooltip": true,
+    /* "tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>" */
+    "tooltip-format": "上午：高数\n下午：Ps\n晚上：Golang\n<tt>{calendar}</tt>",
+  },
+  "memory": {
+    "interval": 1,
+    "format": "﬙ {percentage}%",
+    "on-click": "alacritty -e btm",
+    "states": {
+      "warning": 85,
+    },
+  },
+  "cpu": {
+    "interval": 1,
+    "format": " {usage}%",
+    "on-click": "alacritty -e btm",
+  },
+  "network": {
+    "interval": 1,
+    "format-wifi": "說 {essid}",
+    "format-ethernet": "  {ifname} ({ipaddr})",
+    "format-linked": "說 {essid} (No IP)",
+    "format-disconnected": "說 Disconnected",
+    "tooltip": false,
+    "on-click": "alacritty -e 'nmtui'"
+  },
+  "temperature": {
+    "hwmon-path": "",
+    //"critical-threshold": 80,
+    "tooltip": false,
+    "format": " {temperatureC}°C"
+  },
+  "custom/powermenu": {
+    "format": "",
+    "on-click": "~/.config/wofi/powermenu.sh",
+    "tooltip": false
+  },
+  "tray": {
+    "icon-size": 15,
+    "spacing": 5
+  },
+}
