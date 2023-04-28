@@ -1,6 +1,6 @@
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
-set $mod1 Mod1
+set $alt Mod1
 
 # Home row direction keys, like vim
 set $left h
@@ -38,14 +38,15 @@ exec swayidle -w\
 
 ## Lock Screen
     bindsym $mod+f1 exec ~/.config/sway/scripts/lockman.sh
-
+    bindsym $mod+f2 exec shutdown
+    bindsym $mod+f3 exec restart
 ### Key bindings
 #
 # Basics:
 #
     # Start a floating terminal
     bindsym $mod+c exec $term-float
-
+   
     # Open the power menu
     bindsym $mod+Shift+e exec $powermenu
 
@@ -125,25 +126,25 @@ exec swayidle -w\
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod1+b splith
-    bindsym $mod1+v splitv
+    bindsym $alt+b splith
+    bindsym $alt+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod1+s layout stacking
-    bindsym $mod1+w layout tabbed
-    bindsym $mod1+e layout toggle split
+    bindsym $alt+s layout stacking
+    bindsym $alt+w layout tabbed
+    bindsym $alt+e layout toggle split
 
     # Make the current focus fullscreen
-    bindsym $mod1+f fullscreen
+    bindsym $alt+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod1+Shift+space floating toggle
+    bindsym $alt+Shift+space floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod1+space focus mode_toggle
+    bindsym $alt+space focus mode_toggle
 
     # Move focus to the parent container
-    bindsym $mod1+a focus parent
+    bindsym $alt+a focus parent
 #
 # Scratchpad:
 #
@@ -180,7 +181,7 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 
-bindsym $mod1+r mode "resize"
+bindsym $alt+r mode "resize"
 
 # Resize floating windows with mouse scroll:
     bindsym --whole-window --border $mod+button4 resize shrink height 5 px or 5 ppt

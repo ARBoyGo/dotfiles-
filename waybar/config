@@ -4,6 +4,7 @@
     "river/tags",
     "sway/workspaces",
     "temperature",
+    "sway/mode",
   ],
   "modules-center": [
     "clock"
@@ -26,6 +27,18 @@
   },
   "sway/workspaces": {
     "disable-scroll": true,
+        "format": "  {icon}  ",
+        //"format":"{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+        }
+  },
+  "sway/mode": {
+    "format": "{}",
+    "tooltip": false
   },
   "river/tags": {
     "num-tags": 9
@@ -74,9 +87,10 @@
   "clock": {
     "interval": 1,
     "format": "{:%I:%M %p  %A %b %d}",
-    "tooltip": true,
-    /* "tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>" */
-    "tooltip-format": "上午：高数\n下午：Ps\n晚上：Golang\n<tt>{calendar}</tt>",
+    /* "tooltip": true, */
+    "tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>",
+    /* "tooltip-format": "上午：高数\n下午：Ps\n晚上：Golang\n<tt>{calendar}</tt>" */
+    "on-click": "alacritty -e calcurse",
   },
   "memory": {
     "interval": 1,
