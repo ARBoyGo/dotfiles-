@@ -5,9 +5,10 @@
     "sway/workspaces",
     "temperature",
     "sway/mode",
+    "sway/window",
   ],
   "modules-center": [
-    "clock"
+    "clock",
   ],
   "modules-right": [
     "pulseaudio",

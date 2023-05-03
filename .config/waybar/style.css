@@ -20,7 +20,12 @@
   animation-direction: alternate;
 }
 window#waybar {
-  background-color: transparent;
+    background: transparent;
+    color: white;
+}
+#window {
+    font-weight: bold;
+    font-size: 12px;
 }
 window > box {
   margin: 2px;
