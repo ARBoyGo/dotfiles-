@@ -2,7 +2,7 @@
   font-family: "JetBrainsMono Nerd Font";
   font-size: 12pt;
   font-weight: bold;
-  border-radius: 0px;
+  border-radius: 5px;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -28,8 +28,8 @@ window#waybar {
     font-size: 12px;
 }
 window > box {
-  margin: 2px;
-  padding: 0.5rem;
+  margin: 10px;
+  padding: 5px;
   background-color: rgb(30, 30, 46);
 }
 #workspaces, #tags {

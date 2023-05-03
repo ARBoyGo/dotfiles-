@@ -38,7 +38,7 @@ exec swayidle -w\
 
 ## Lock Screen
     bindsym $mod+f1 exec ~/.config/sway/scripts/lockman.sh
-    bindsym $mod+f2 exec shutdown
+    bindsym $mod+f2 exec poweroff
     bindsym $mod+f3 exec restart
 ### Key bindings
 #
@@ -227,4 +227,4 @@ bindsym $alt+r mode "resize"
 #
 # Keybindings List
 #
-    bindsym $mod+t exec xed ~/.config/sway/cheatsheet
+bindsym $mod+t exec xed ~/.config/sway/cheatsheet
