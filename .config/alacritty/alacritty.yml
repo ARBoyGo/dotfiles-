@@ -1,0 +1,40 @@
+window:
+  dynamic_title: true
+  dimensions:
+    columns: 0
+    lines: 0
+
+  opacity: 0.9
+
+  position:
+    x: 0
+    y: 0
+
+  #startup_mode: SimpleFullscreen
+  #position:
+    #x: 0
+    #y: 0
+
+  padding:
+    x: 25
+    y: 15 
+
+  dynamic_padding: false
+
+scrolling:
+  history: 50000
+  multiplier: 3
+
+  size: 17.0
+
+  offset:
+    x: 0
+    y: 5
+
+  glyph_offset:
+    x: 0
+    y: 0
+
+  use_thin_strokes: true
+
+draw_bold_text_with_bright_colors: true

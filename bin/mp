@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Music player script
+
+# Set the music directory
+DIR="$HOME/Music"
+
+# Select a random song
+SONG=$(find "$DIR" -type f \( -name "*.mp3" -o -name "*.m4a" \) | shuf -n 1)
+
+# Check if mpv is already running
+if pgrep -x "mpv" >/dev/null; then
+  # Kill the existing mpv process
+  pkill -x mpv
+fi
+
+# Play the song using mpv
+mpv "$SONG" --no-audio-display 

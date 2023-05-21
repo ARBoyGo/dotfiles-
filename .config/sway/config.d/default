@@ -19,6 +19,12 @@ set $mic_mute $(pactl set-source-mute @DEFAULT_SOURCE@ toggle && pactl get-sourc
 # Your preferred terminal emulators
 set $term-float alacritty
 
+# Preferred File Manager
+set $fileManager alacritty -e ranger
+set $fileManagerGUI thunar
+ 
+# thunar is default File Manager 
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -216,8 +222,9 @@ bindsym $alt+r mode "resize"
 #
 # App shortcuts
 #
-    bindsym $mod+f exec thunar
+    bindsym $mod+f exec $fileManager 
     bindsym $mod+b exec firefox
+    bindsym $mod+g exec $fileManagerGUI
 #
 # Screenshots
 #
@@ -226,6 +233,11 @@ bindsym $alt+r mode "resize"
     bindsym $mod+$alt+p exec wf-recorder -g "$(slurp)" -f ~/Videos/mov-$(date +"%Y-%m-%d--%H-%M-%S.mp4")
     bindsym $mod+BackSpace exec killall -s SIGINT wf-recorder
 #   bindsym Shift+print exec ~/.config/sway/scripts/screenshot.sh
+#
+# Music Player
+#
+   bindsym $mod+m exec ~/bin/mp
+   bindsym $mod+n exec ~/bin/mps
 #
 # Keybindings List
 #

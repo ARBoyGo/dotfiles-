@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Stop music script
+
+# Send the TERM signal to the mpv process
+pkill -TERM mpv
+
