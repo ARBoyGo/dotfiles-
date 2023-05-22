@@ -39,8 +39,7 @@
          }
   },
   "sway/mode": {
-//  "format": "{}",
-    "format": "<span style=\"italic\">  {}</span>", // Icon: expand-arrows-alt
+    "format": "<span style=\"italic\"> {}</span>",
     "tooltip": false
   },
   "sway/window": {
@@ -68,9 +67,9 @@
   "pulseaudio": {
     "scroll-step": 1,
     "format": "{icon} {volume}%", 
-    "format-muted": "婢 Muted",
+    "format-muted": "󰖁 Muted",
     "format-icons": {
-      "default": ["", "", ""]
+      "default": ["", "", "󰕾"]
     },
     "states": {
       "warning": 85,
@@ -97,12 +96,11 @@
     "format": "{:%I:%M %p  %A %b %d}",
     /* "tooltip": true, */
     "tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>",
-    /* "tooltip-format": "上午：高数\n下午：Ps\n晚上：Golang\n<tt>{calendar}</tt>" */
     "on-click": "alacritty -e calcurse",
   },
   "memory": {
     "interval": 1,
-    "format": "﬙ {percentage}%",
+    "format": " {percentage}%",
     "on-click": "alacritty -e btm",
     "states": {
       "warning": 85,
@@ -110,15 +108,15 @@
   },
   "cpu": {
     "interval": 1,
-    "format": " {usage}%",
+    "format": " {usage}%",
     "on-click": "alacritty -e btm",
   },
   "network": {
     "interval": 1,
-    "format-wifi": "說 {essid}",
-    "format-ethernet": "  {ifname} ({ipaddr})",
-    "format-linked": "說 {essid} (No IP)",
-    "format-disconnected": "說 Disconnected",
+    "format-wifi": " {essid}",
+    "format-ethernet": "󰈀  {ifname} ({ipaddr})",
+    "format-linked": "󰀂 {essid} (No IP)",
+    "format-disconnected": "󰖪 Disconnected",
     "tooltip": false,
     "on-click": "alacritty -e 'nmtui'"
   },
@@ -138,8 +136,3 @@
     "spacing": 5
   },
 }
-//  "custom/keyboard-layout": {
-//    "exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name',
-//    "interval": 30,
-//    "format": "  {}", // Icon: keyboard,
-//   },
