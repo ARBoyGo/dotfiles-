@@ -207,6 +207,8 @@ bindsym $alt+r mode "resize"
     bindsym --locked XF86AudioRaiseVolume exec $volume_up
     bindsym --locked XF86AudioLowerVolume exec $volume_down
     bindsym --locked XF86AudioMute exec $volume_mute
+    bindsym $alt+m exec amixer -q sset Master 10%+
+    bindsym $alt+n exec amixer -q sset Master 10%-
 #
 # Player
 #
