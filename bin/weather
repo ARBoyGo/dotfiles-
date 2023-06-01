@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Location
+# ed -i 's/choose your place/place_name/g' ~/bin/weather
+location="choose your place"
+
+# Generate the URL for wttr.in based on location and format
+url="wttr.in/${location}?format=3"
+
+# Use curl command to fetch weather information
+curl -s "$url"
