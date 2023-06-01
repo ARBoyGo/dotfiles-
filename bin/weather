@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Location
-# ed -i 's/choose your place/place_name/g' ~/bin/weather
+# sed -i 's/choose your place/place_name/g' ~/bin/weather
 location="choose your place"
 
 # Generate the URL for wttr.in based on location and format
