@@ -64,7 +64,19 @@ tooltip label {
   padding-right: 6px;
   color: rgb(201, 203, 255);
 }
-#mode, #clock, #memory, #temperature,#cpu,#mpd, #temperature, #backlight, #pulseaudio, #network, #battery, #custom-powermenu {
+#mode,
+#clock,
+#memory,
+#temperature,
+#cpu,
+#mpd,
+#temperature,
+#backlight,
+#pulseaudio,
+#network, 
+#battery, 
+#custom-powermenu,
+#custom-weather {
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -92,7 +104,9 @@ tooltip label {
 #network {
   color: #ABE9B3;
 }
-
+#custom-weather {
+  color: white;
+}
 #network.disconnected {
   color: rgb(255, 255, 255);
 }
