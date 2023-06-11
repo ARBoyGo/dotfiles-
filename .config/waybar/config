@@ -111,7 +111,9 @@
   },
   "clock": {
     "interval": 1,
-    "format": "{:%I:%M %p  %A %b %d}",
+    "format": "{:%A  %d/%B/%Y %I:%M:%S %p}",
+    /*"format": "{:%I:%M:S %p  %Y-%b-%d-%a}",*/
+    /*"format": "{:%I:%M %p  %A %b %d}",*/
     /* "tooltip": true, */
     "tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>",
     "on-click": "alacritty -e calcurse",
@@ -149,7 +151,7 @@
   "custom/weather": {
     "exec": "~/.config/waybar/scripts/weather.sh <your_location>", 
     "return-type": "json",
-    "interval": 600,
+    "interval": 300,
     },
   "custom/powermenu": {
     "format": "",

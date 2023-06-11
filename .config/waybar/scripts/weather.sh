@@ -1,13 +1,9 @@
 #!/bin/bash
 
 LOC="$1"
-# HTML encode string as %20
+# Weather fetch from wttr.in
 LOCATION=$(sed -e "s/ /%20/g" <<<"$LOC")
-content=$(curl -sS "https://thisdavej.azurewebsites.net/api/weather/current?loc=$LOCATION&deg=C")
-ICON=$(curl -s 'https://wttr.in/?format=1' | sed 's/[+0-9a-cA-Z°-]//g' )
-# echo $ICON
-TEMP=$(echo $content | jq -r '. | "\(.temperature)°\(.degType)"' | sed 's/"//g')
-TOOLTIP=$(echo $content | jq -r '. | "\(.temperature)°\(.degType)\n\(.skytext)"' | sed 's/"//g')
-CLASS=$(echo $content | jq .skytext)
-echo '{"text": "'$TEMP'", "tooltip": "'$ICON $TOOLTIP $LOC'", "class": '$CLASS' }'
-
+WEATHER=$(curl -s "https://wttr.in/${LOCATION}?format=%t" | sed 's/+//')
+ICON=$(curl -s "wttr.in/Kozhikode?format=3" | cut -d " " -f 2)
+WEATHER_CLASS=$(curl -s "https://wttr.in/${LOCATION}?format=%C")
+echo '{"text": "'$ICON $WEATHER'", "tooltip": "'$ICON $WEATHER $WEATHER_CLASS $LOC'", "class": "'$WEATHER_CLASS'" }'

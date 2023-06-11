@@ -1,0 +1,4 @@
+#!/bin/bash
+server="p.projectsegfau.lt"
+username="arboy"
+ssh $username@$server
