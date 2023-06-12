@@ -69,16 +69,23 @@ tooltip label {
 #memory,
 #temperature,
 #cpu,
-#mpd,
 #temperature,
 #backlight,
 #pulseaudio,
 #network, 
 #battery, 
 #custom-powermenu,
-#custom-weather {
+#custom-weather,
+#custom-swap,
+#custom-cava {
   padding-left: 10px;
   padding-right: 10px;
+}
+#custom-cava {
+  color: #ABE9B3;
+}
+#custom-swap {
+  color: #d4fa00;
 }
 #memory {
   color: rgb(181, 232, 224);
@@ -122,14 +129,4 @@ tooltip label {
 #tray {
   padding-right: 8px;
   padding-left: 10px;
-}
-#mpd.paused {
-  color: #414868;
-  font-style: italic;
-}
-#mpd.stopped {
-  background: transparent;
-}
-#mpd {
-  color: #c0caf5;
 }

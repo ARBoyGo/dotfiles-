@@ -10,6 +10,7 @@
     "custom/launcher",
     "sway/workspaces",
     "temperature",
+    "custom/cava",
     "sway/window",
     "sway/mode",
     ],
@@ -24,6 +25,7 @@
     "pulseaudio",
     "backlight",
     "memory",
+    "custom/swap",
     "cpu",
     "network",
     "battery",
@@ -111,7 +113,7 @@
   },
   "clock": {
     "interval": 1,
-    "format": "{:%A  %d/%B/%Y %I:%M:%S %p}",
+    "format": "{:%I:%M:%S %p %A  %d/%B/%Y}",
     /*"format": "{:%I:%M:S %p  %Y-%b-%d-%a}",*/
     /*"format": "{:%I:%M %p  %A %b %d}",*/
     /* "tooltip": true, */
@@ -146,6 +148,11 @@
     "tooltip": false,
     "format": " {temperatureC}°C"
   },
+"custom/cava": {
+  "exec": "~/.config/waybar/scripts/cava.sh",
+  "return-type": "json",
+  "interval": 0.1
+},
   // to use the weather module replace <your_location> with your city or town
   // note: do not use spaces: new york would be newyork
   "custom/weather": {
@@ -153,6 +160,11 @@
     "return-type": "json",
     "interval": 300,
     },
+  "custom/swap": {
+  "exec": "~/.config/waybar/scripts/swap.sh",
+  "interval": 1,
+  "return-type": "json",
+},
   "custom/powermenu": {
     "format": "",
     "on-click": "~/.config/wofi/powermenu.sh",

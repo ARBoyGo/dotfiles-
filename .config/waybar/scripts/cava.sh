@@ -15,10 +15,10 @@ done
 
 # make sure to clean pipe
 pipe="/tmp/cava.fifo"
-if [ -p $pipe ]; then
-    unlink $pipe
+if [ -p "$pipe" ]; then
+    unlink "$pipe"
 fi
-mkfifo $pipe
+mkfifo "$pipe"
 
 # write cava config
 config_file="/tmp/cava_config"
@@ -31,12 +31,13 @@ method = raw
 raw_target = $pipe
 data_format = ascii
 ascii_max_range = 7
-" > $config_file
+" > "$config_file"
 
 # run cava in the background
-cava -p $config_file &
+cava -p "$config_file" &
 
-# reading data from fifo
+# reading data from fifo and outputting as JSON
 while read -r cmd; do
-    echo $cmd | sed "$dict"
-done < $pipe
+    output=$(echo "$cmd" | sed "$dict")
+    echo "{\"text\":\"$output\",\"tooltip\":\"$output\"}"
+done < "$pipe"
