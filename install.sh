@@ -14,3 +14,4 @@ sudo pacman -Syu --needed --noconfirm - < packages-repository.txt
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 cp .oh-my-zsh/arboy.zsh-theme ~/.oh-my-zsh/arboy.zsh-theme
 cp .zshrc ~/.zshrc
+dbus-launch dconf load / < xed.dconf
