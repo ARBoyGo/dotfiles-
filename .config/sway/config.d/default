@@ -22,6 +22,10 @@ set $term-float alacritty
 # Preferred File Manager
 set $fileManager alacritty -e ranger
 set $fileManagerGUI thunar
+
+# Preferred Browser
+set $brw1 firefox
+set $brw2 chromium
  
 # thunar is default File Manager 
 
@@ -132,8 +136,8 @@ exec swayidle -w\
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $alt+b splith
-    bindsym $alt+v splitv
+    bindsym $alt+Shift+b splith
+    bindsym $alt+Shift+v splitv
 
     # Switch the current container between different layout styles
     bindsym $alt+s layout stacking
@@ -225,7 +229,8 @@ bindsym $alt+r mode "resize"
 # App shortcuts
 #
     bindsym $mod+f exec $fileManager 
-    bindsym $mod+b exec firefox
+    bindsym $mod+b exec $brw1
+    bindsym $alt+b exec $brw2
     bindsym $mod+g exec $fileManagerGUI
 #
 # Screenshots
