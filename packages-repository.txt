@@ -21,7 +21,6 @@ acpi
 bluez-utils
 network-manager-applet
 sysstat
-htop
 wayland-protocols
 xorg-xwayland
 egl-wayland
@@ -41,3 +40,5 @@ alacritty
 ranger
 zsh
 powerline-fonts
+calcurse
+bottom
