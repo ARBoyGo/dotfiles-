@@ -19,8 +19,11 @@ set $mic_mute $(pactl set-source-mute @DEFAULT_SOURCE@ toggle && pactl get-sourc
 # Your preferred terminal emulators
 set $term-float alacritty
 
+# Lock screen
+set $lockman exec bash ~/.config/sway/lockman.sh
+
 # Preferred File Manager
-set $fileManager alacritty -e ranger
+# set $fileManager alacritty -e ranger
 set $fileManagerGUI thunar
 
 # Preferred Browser
@@ -37,11 +40,11 @@ set $menu ~/.config/wofi/launcher.sh
 set $powermenu ~/.config/wofi/powermenu.sh
 
 ### Idle configuration
-exec swayidle -w\
-    timeout 1070 'swaylock -f -C ~/.config/swaylock/config'\
-    timeout 770 'swaymsg "output * power off"' \
-    resume 'swaymsg "output * power on"' \
-    before-sleep 'swaylock -C ~/.config/swaylock/config'
+# exec swayidle -w\
+#    timeout 1070 'swaylock -f -C ~/.config/swaylock/config'\
+#    timeout 770 'swaymsg "output * power off"' \
+#    resume 'swaymsg "output * power on"' \
+#    before-sleep 'swaylock -C ~/.config/swaylock/config'
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
@@ -225,6 +228,8 @@ bindsym $alt+r mode "resize"
 #
     bindsym XF86MonBrightnessUp exec brightnessctl -c backlight set +5%
     bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 5%-
+    bindsym $alt+Shift+l exec backlight_control +10
+    bindsym $alt+Shift+h exec backlight_control -10
 #
 # App shortcuts
 #
@@ -232,6 +237,7 @@ bindsym $alt+r mode "resize"
     bindsym $mod+b exec $brw1
     bindsym $alt+b exec $brw2
     bindsym $mod+g exec $fileManagerGUI
+    bindsym $alt+c exec alacritty -e tty-clock -c -C 2 -t
 #
 # Screenshots
 #
@@ -248,4 +254,13 @@ bindsym $alt+r mode "resize"
 #
 # Keybindings List
 #
-bindsym $mod+t exec xed ~/.config/sway/cheatsheet
+   bindsym $mod+t exec xed ~/.config/sway/cheatsheet
+#
+# Shortcuts
+# 
+   bindsym $alt+k exec ~/bin/shortcut
+#
+# Lock Screen
+#
+   bindsym $alt+l exec $lockman
+#

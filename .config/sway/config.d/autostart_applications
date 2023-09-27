@@ -7,9 +7,6 @@ exec mako
 # Network Applet
 exec nm-applet --indicator
 
-# Syncthing - Data backup
-exec syncthing  --no-browser
-
 # GTK3 applications take a long time to start
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && \
@@ -19,4 +16,4 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 exec dex -a -s /etc/xdg/autostart/:~/.config/autostart/  
 
 # Sway Fader
-# exec python3 ~/.config/sway/scripts/swayfader.py      
+# exec python3 ~/.config/sway/scripts/swayfader.py     

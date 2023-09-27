@@ -1,0 +1,22 @@
+#!/bin/bash
+
+folder_path="$HOME/bin/phrases/"
+
+files=("$folder_path"/*)
+
+titles=()
+for file in "${files[@]}"; do
+    title=$(basename "$file")
+    titles+=("$title")
+done
+
+selected_title=$(printf '%s\n' "${titles[@]}" | wofi --dmenu)
+
+if [[ -n $selected_title ]]; then
+    selected_file="$folder_path/$selected_title"
+    
+    content=$(cat "$selected_file")
+    
+    printf '%s' "$content" | wl-copy
+fi
+
