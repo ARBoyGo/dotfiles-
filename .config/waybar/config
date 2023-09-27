@@ -8,19 +8,20 @@
 
   "modules-left": [
     "custom/launcher",
+    "custom/firefox",
     "sway/workspaces",
     "temperature",
-    "custom/cava",
     "sway/window",
     "sway/mode",
     ],
  
     "modules-center": [
-        "clock",
-        "custom/weather"
+        "clock"
+       /* "custom/weather" */
     ],
 
     "modules-right": [
+    "custom/cava",
     "custom/keyboard-layout",
     "pulseaudio",
     "backlight",
@@ -39,17 +40,22 @@
     "on-click": "~/.config/wofi/launcher.sh",
     "tooltip": false
   },
+
+  "custom/firefox": {
+    "format": " ",
+    "on-click": "firefox",
+  },
   "sway/workspaces": {
     "disable-scroll": false,
         "format": "  {icon}  ",
         //"format":"{icon}",
-        "format-icons": {
+        /* "format-icons": {
             "1": "",
             "2": "",
             "3": "",
             "4": "",
             "5": "",
-         }
+         } */ 
   },
   "sway/mode": {
     "format": "<span style=\"italic\"> {}</span>",
@@ -78,28 +84,22 @@
     "tooltip": false
   },
   "backlight": {
-    "device": "intel_backlight",
-    "on-scroll-up": "light -A 5",
-    "on-scroll-down": "light -U 5",
+    "on-scroll-up": "brightnessctl s 10%+",
+    "on-scroll-down": "brightnessctl s 10%-",
     "format": "{icon} {percent}%",
-    "format-icons": ["","","",""]
+    "format-icons": ["󰃚","󰃞","󰃠"]
   },
   "pulseaudio": {
     "scroll-step": 1,
     "format": "{icon} {volume}%", 
     "format-muted": "󰖁 Muted",
     "format-icons": {
-      "default": ["", "", "󰕾"]
-    },
-    "states": {
-      "warning": 85,
-    },
+      "default": ["", "", ""]    },
     "scroll-step": 1,
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "on-click-middle": "pavucontrol",
     "tooltip": false,
   },
-  "battery": {
+   "battery": {
     "interval": 10,
     "states": {
       "warning": 20,
@@ -113,7 +113,7 @@
   },
   "clock": {
     "interval": 1,
-    "format": "{:%I:%M:%S %p %A  %d/%B/%Y}",
+    "format": "{:%I:%M %p %a %d %b}",
     /*"format": "{:%I:%M:S %p  %Y-%b-%d-%a}",*/
     /*"format": "{:%I:%M %p  %A %b %d}",*/
     /* "tooltip": true, */
@@ -156,7 +156,7 @@
   // to use the weather module replace <your_location> with your city or town
   // note: do not use spaces: new york would be newyork
   "custom/weather": {
-    "exec": "~/.config/waybar/scripts/weather.sh <your_location>", 
+    "exec": "~/.config/waybar/scripts/weather.sh Dammam", 
     "return-type": "json",
     "interval": 300,
     },

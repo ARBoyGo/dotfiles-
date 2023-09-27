@@ -64,6 +64,13 @@ tooltip label {
   padding-right: 6px;
   color: rgb(201, 203, 255);
 }
+
+#custom-firefox {
+  padding-left: 6px;
+  padding-right: 6px;
+  color: rgb(250,153,49);
+}
+
 #mode,
 #clock,
 #memory,
