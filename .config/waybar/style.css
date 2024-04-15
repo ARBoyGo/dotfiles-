@@ -21,7 +21,7 @@
 }
 window#waybar {
     background: transparent;
-    color: white;
+    color: #BB9DD6;
 }
 #window {
     font-weight: bold;
@@ -30,7 +30,7 @@ window#waybar {
 window > box {
   margin: 10px;
   padding: 5px;
-  background-color: rgb(30, 30, 46);
+  background-color: #1E1E2E;
 }
 #workspaces, #tags {
   padding-left: 0px;
@@ -64,13 +64,6 @@ tooltip label {
   padding-right: 6px;
   color: rgb(201, 203, 255);
 }
-
-#custom-firefox {
-  padding-left: 6px;
-  padding-right: 6px;
-  color: rgb(250,153,49);
-}
-
 #mode,
 #clock,
 #memory,
@@ -89,19 +82,19 @@ tooltip label {
   padding-right: 10px;
 }
 #custom-cava {
-  color: #ABE9B3;
+  color: #BB9DD6;
 }
 #custom-swap {
-  color: #d4fa00;
+  color: #D9D69B;
 }
 #memory {
-  color: rgb(181, 232, 224);
+  color: #A6BBB0;
 }
 #cpu {
   color: rgb(245, 194, 231);
 }
 #clock {
-  color: rgb(217, 224, 238);
+  color: #BB9DD6;
 }
 #idle_inhibitor {
   color: rgb(221, 182, 242);
@@ -113,7 +106,7 @@ tooltip label {
   color: rgb(248, 189, 150);
 }
 #pulseaudio {
-  color: rgb(245, 224, 220);
+  color: #BB9DD6;
 }
 #network {
   color: #ABE9B3;

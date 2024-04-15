@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-panel" version="1.0">
+  <property name="configver" type="int" value="2"/>
+  <property name="panels" type="array">
+    <value type="int" value="1"/>
+    <property name="dark-mode" type="bool" value="false"/>
+    <property name="panel-1" type="empty">
+      <property name="position" type="string" value="p=8;x=960;y=993"/>
+      <property name="length" type="double" value="100"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="icon-size" type="uint" value="0"/>
+      <property name="size" type="uint" value="34"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="16"/>
+        <value type="int" value="26"/>
+        <value type="int" value="3"/>
+        <value type="int" value="7"/>
+        <value type="int" value="23"/>
+        <value type="int" value="25"/>
+        <value type="int" value="24"/>
+        <value type="int" value="12"/>
+        <value type="int" value="2"/>
+        <value type="int" value="5"/>
+        <value type="int" value="4"/>
+        <value type="int" value="6"/>
+        <value type="int" value="8"/>
+        <value type="int" value="9"/>
+        <value type="int" value="10"/>
+        <value type="int" value="11"/>
+        <value type="int" value="13"/>
+        <value type="int" value="14"/>
+        <value type="int" value="1"/>
+        <value type="int" value="17"/>
+        <value type="int" value="15"/>
+      </property>
+      <property name="background-style" type="uint" value="1"/>
+      <property name="background-rgba" type="array">
+        <value type="double" value="0.13333333333333333"/>
+        <value type="double" value="0.098039215686274536"/>
+        <value type="double" value="0.24313725490196078"/>
+        <value type="double" value="0.90035587188612098"/>
+      </property>
+      <property name="autohide-behavior" type="uint" value="2"/>
+      <property name="nrows" type="uint" value="1"/>
+    </property>
+  </property>
+  <property name="plugins" type="empty">
+    <property name="plugin-2" type="string" value="tasklist">
+      <property name="grouping" type="uint" value="1"/>
+      <property name="flat-buttons" type="bool" value="false"/>
+      <property name="show-labels" type="bool" value="true"/>
+    </property>
+    <property name="plugin-3" type="string" value="separator">
+      <property name="expand" type="bool" value="false"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-4" type="string" value="pager">
+      <property name="rows" type="uint" value="1"/>
+      <property name="wrap-workspaces" type="bool" value="true"/>
+    </property>
+    <property name="plugin-5" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+      <property name="expand" type="bool" value="true"/>
+    </property>
+    <property name="plugin-6" type="string" value="systray">
+      <property name="square-icons" type="bool" value="true"/>
+      <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “xiaomi_7c1a” active: xiaomi_7c1a (56%)"/>
+        <value type="string" value="wi-fi network connection “xiaomi_7c1a” active: xiaomi_7c1a (57%)"/>
+        <value type="string" value="wi-fi network connection “xiaomi_7c1a” active: xiaomi_7c1a (48%)"/>
+        <value type="string" value="wi-fi network connection “xiaomi_7c1a” active: xiaomi_7c1a (58%)"/>
+        <value type="string" value="wi-fi network connection “xiaomi_7c1a” active: xiaomi_7c1a (60%)"/>
+        <value type="string" value="wi-fi network connection “xiaomi_7c1a_5g” active: xiaomi_7c1a_5g (45%)"/>
+        <value type="string" value="blueberry-tray.py"/>
+        <value type="string" value="wi-fi network connection “1h4ckú” active: 1h4ckú (73%)"/>
+        <value type="string" value="wi-fi network connection “1h4ckú” active: 1h4ckú (83%)"/>
+        <value type="string" value="wi-fi network connection “1h4ckú” active: 1h4ckú (67%)"/>
+        <value type="string" value="wi-fi network connection “1h4ckú” active: 1h4ckú (79%)"/>
+        <value type="string" value="wi-fi network connection “najma&apos;s galaxy a14 5g” active: najma&apos;s galaxy a14 5g (55%)"/>
+        <value type="string" value="wi-fi network connection “najma&apos;s galaxy a14 5g” active: najma&apos;s galaxy a14 5g (43%)"/>
+        <value type="string" value="wi-fi network connection “najma&apos;s galaxy a14 5g” active: najma&apos;s galaxy a14 5g (57%)"/>
+        <value type="string" value="wi-fi network connection “1h4ckú” active: 1h4ckú (87%)"/>
+        <value type="string" value="wi-fi network connection “1h4ckú” active: 1h4ckú (81%)"/>
+        <value type="string" value="wi-fi network connection “1h4ckú” active: 1h4ckú (69%)"/>
+        <value type="string" value="wi-fi network connection “redmi note 10 5g” active: redmi note 10 5g (63%)"/>
+        <value type="string" value="wi-fi network connection “redmi note 10 5g” active: redmi note 10 5g (73%)"/>
+        <value type="string" value="wi-fi network connection “redmi note 10 5g” active: redmi note 10 5g (69%)"/>
+        <value type="string" value="notes"/>
+        <value type="string" value="wi-fi network connection “redmi note 10 5g” active: redmi note 10 5g (81%)"/>
+        <value type="string" value="wi-fi network connection “xiaomi_7c1a” active: xiaomi_7c1a (67%)"/>
+        <value type="string" value="wi-fi network connection “1h4ckú” active: 1h4ckú (89%)"/>
+        <value type="string" value="wi-fi network connection “xiaomi_7c1a” active: xiaomi_7c1a (61%)"/>
+        <value type="string" value="wi-fi network connection “xiaomi_7c1a” active: xiaomi_7c1a (65%)"/>
+        <value type="string" value="anydesk"/>
+        <value type="string" value="wi-fi network connection “xiaomi_7c1a” active: xiaomi_7c1a (63%)"/>
+        <value type="string" value="wi-fi network connection “xiaomi_7c1a” active: xiaomi_7c1a (59%)"/>
+        <value type="string" value="ethernet network connection “wired connection 2” active"/>
+        <value type="string" value="no network connection"/>
+        <value type="string" value="networkmanager applet"/>
+        <value type="string" value="firewall-applet"/>
+        <value type="string" value="ethernet network connection “wired connection 1” active"/>
+      </property>
+      <property name="known-items" type="array">
+        <value type="string" value="qBittorrent"/>
+        <value type="string" value="TelegramDesktop"/>
+        <value type="string" value="obs"/>
+        <value type="string" value="chrome_status_icon_1"/>
+        <value type="string" value="Proton VPN Tray"/>
+        <value type="string" value="TeamViewer"/>
+        <value type="string" value="nm-applet"/>
+        <value type="string" value="autokey-qt"/>
+        <value type="string" value="remmina-icon"/>
+        <value type="string" value="vlc"/>
+        <value type="string" value="firewall-applet"/>
+      </property>
+    </property>
+    <property name="plugin-8" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="show-notifications" type="bool" value="true"/>
+      <property name="mpris-players" type="string" value="firefox.instance1871;vlc"/>
+      <property name="known-players" type="string" value="Chromium;firefox;Firefox Web Browser;VLC media player"/>
+    </property>
+    <property name="plugin-9" type="string" value="power-manager-plugin"/>
+    <property name="plugin-10" type="string" value="notification-plugin"/>
+    <property name="plugin-11" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-13" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-14" type="string" value="actions">
+      <property name="button-title" type="uint" value="0"/>
+      <property name="appearance" type="uint" value="0"/>
+      <property name="items" type="array">
+        <value type="string" value="-lock-screen"/>
+        <value type="string" value="-switch-user"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="-suspend"/>
+        <value type="string" value="-hibernate"/>
+        <value type="string" value="-hybrid-sleep"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="-shutdown"/>
+        <value type="string" value="-restart"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="+logout"/>
+        <value type="string" value="-logout-dialog"/>
+      </property>
+    </property>
+    <property name="plugin-1" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-7" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="16712150205.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-23" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="16712150326.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-24" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="16712150758.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-25" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="16712150507.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-26" type="string" value="whiskermenu">
+      <property name="button-title" type="string" value=" EndeavourOS  "/>
+      <property name="button-icon" type="string" value="endeavouros-icon"/>
+      <property name="show-button-title" type="bool" value="true"/>
+      <property name="view-mode" type="int" value="0"/>
+      <property name="favorites-in-recent" type="bool" value="true"/>
+      <property name="position-search-alternate" type="bool" value="true"/>
+      <property name="position-commands-alternate" type="bool" value="true"/>
+      <property name="position-categories-alternate" type="bool" value="true"/>
+      <property name="menu-width" type="int" value="671"/>
+      <property name="menu-height" type="int" value="456"/>
+      <property name="command-switchuser" type="string" value="dm-tool switch-to-greeter"/>
+      <property name="show-command-restart" type="bool" value="true"/>
+      <property name="show-command-shutdown" type="bool" value="true"/>
+      <property name="show-command-menueditor" type="bool" value="false"/>
+      <property name="show-command-profile" type="bool" value="false"/>
+      <property name="favorites" type="array">
+        <value type="string" value="firefox.desktop"/>
+        <value type="string" value="blueman-manager.desktop"/>
+        <value type="string" value="firewall-config.desktop"/>
+        <value type="string" value="eos-quickstart.desktop"/>
+        <value type="string" value="eos-update-notifier-configure.desktop"/>
+        <value type="string" value="eos-apps-info.desktop"/>
+        <value type="string" value="eos-log-tool.desktop"/>
+        <value type="string" value="reflector-simple.desktop"/>
+        <value type="string" value="welcome.desktop"/>
+      </property>
+      <property name="recent" type="array">
+        <value type="string" value="xfce-settings-manager.desktop"/>
+        <value type="string" value="xfce-wmtweaks-settings.desktop"/>
+        <value type="string" value="waydroid.com.android.settings.desktop"/>
+        <value type="string" value="xfce-session-settings.desktop"/>
+        <value type="string" value="xfce-keyboard-settings.desktop"/>
+        <value type="string" value="microsoft-edge.desktop"/>
+        <value type="string" value="kitty.desktop"/>
+        <value type="string" value="org.gnome.Calculator.desktop"/>
+        <value type="string" value="libreoffice-calc.desktop"/>
+        <value type="string" value="com.teamviewer.TeamViewer.desktop"/>
+      </property>
+      <property name="search-actions" type="int" value="7">
+        <property name="action-0" type="empty">
+          <property name="name" type="string" value="Man Pages"/>
+          <property name="pattern" type="string" value="#"/>
+          <property name="command" type="string" value="exo-open --launch TerminalEmulator man %s"/>
+          <property name="regex" type="bool" value="false"/>
+        </property>
+        <property name="action-1" type="empty">
+          <property name="name" type="string" value="Search the Web"/>
+          <property name="pattern" type="string" value="?"/>
+          <property name="command" type="string" value="exo-open --launch WebBrowser https://duckduckgo.com/?q=%u"/>
+          <property name="regex" type="bool" value="false"/>
+        </property>
+        <property name="action-2" type="empty">
+          <property name="name" type="string" value="Search for Files"/>
+          <property name="pattern" type="string" value="-"/>
+          <property name="command" type="string" value="catfish --path=~ --start %s"/>
+          <property name="regex" type="bool" value="false"/>
+        </property>
+        <property name="action-3" type="empty">
+          <property name="name" type="string" value="Wikipedia"/>
+          <property name="pattern" type="string" value="!w"/>
+          <property name="command" type="string" value="exo-open --launch WebBrowser https://en.wikipedia.org/wiki/%u"/>
+          <property name="regex" type="bool" value="false"/>
+        </property>
+        <property name="action-4" type="empty">
+          <property name="name" type="string" value="Run in Terminal"/>
+          <property name="pattern" type="string" value="!"/>
+          <property name="command" type="string" value="exo-open --launch TerminalEmulator %s"/>
+          <property name="regex" type="bool" value="false"/>
+        </property>
+        <property name="action-5" type="empty">
+          <property name="name" type="string" value="Open URI"/>
+          <property name="pattern" type="string" value="^(file|http|https):\/\/(.*)$"/>
+          <property name="command" type="string" value="exo-open \0"/>
+          <property name="regex" type="bool" value="true"/>
+        </property>
+        <property name="action-6" type="empty">
+          <property name="name" type="string" value="EndeavourOS Forum"/>
+          <property name="pattern" type="string" value="forum"/>
+          <property name="command" type="string" value="exo-open --launch WebBrowser https://forum.endeavouros.com"/>
+          <property name="regex" type="bool" value="false"/>
+        </property>
+      </property>
+    </property>
+    <property name="plugin-16" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-12" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="16944685011.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-15" type="string" value="clock">
+      <property name="digital-time-format" type="string" value="%l:%M:%S %P"/>
+    </property>
+    <property name="notes" type="empty">
+      <property name="global" type="empty">
+        <property name="version" type="string" value="1.11.0"/>
+      </property>
+    </property>
+    <property name="plugin-17" type="string" value="xkb">
+      <property name="display-type" type="uint" value="1"/>
+      <property name="display-name" type="uint" value="1"/>
+      <property name="display-scale" type="uint" value="57"/>
+      <property name="show-notifications" type="bool" value="true"/>
+      <property name="display-tooltip-icon" type="bool" value="true"/>
+      <property name="group-policy" type="uint" value="0"/>
+    </property>
+  </property>
+</channel>

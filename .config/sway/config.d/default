@@ -49,10 +49,15 @@ set $powermenu ~/.config/wofi/powermenu.sh
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 
+# Wallpaper 
+
+bindsym $mod+Shift+d exec "pkill -x swaybg && swaybg -i ~/.config/sway/dark.png -m fill"
+bindsym $mod+Shift+f exec "pkill -x swaybg && swaybg -i ~/.config/sway/light.png -m fill"
+
 ## Lock Screen
-    bindsym $mod+f1 exec ~/.config/sway/scripts/lockman.sh
-    bindsym $mod+f2 exec poweroff
-    bindsym $mod+f3 exec restart
+#    bindsym $mod+f1 exec ~/.config/sway/scripts/lockman.sh
+#    bindsym $mod+f2 exec poweroff
+#    bindsym $mod+f3 exec restart
 ### Key bindings
 #
 # Basics:
@@ -238,13 +243,14 @@ bindsym $alt+r mode "resize"
     bindsym $alt+b exec $brw2
     bindsym $mod+g exec $fileManagerGUI
     bindsym $alt+c exec alacritty -e tty-clock -c -C 2 -t
+    bindsym $mod+$alt+n exec sticky-notes
 #
 # Screenshots
 #
 #   bindsym print exec /usr/share/sway/scripts/grimshot --notify save output
     bindsym print exec grim -g "$(slurp)" - | (swappy -f -)
     bindsym $mod+$alt+p exec wf-recorder -g "$(slurp)" -f ~/Videos/mov-$(date +"%Y-%m-%d--%H-%M-%S.mp4")
-    bindsym $mod+BackSpace exec killall -s SIGINT wf-recorder
+    bindsym $mod+Space exec killall -s SIGINT wf-recorder
 #   bindsym Shift+print exec ~/.config/sway/scripts/screenshot.sh
 #
 # Music Player
@@ -263,4 +269,4 @@ bindsym $alt+r mode "resize"
 # Lock Screen
 #
    bindsym $alt+l exec $lockman
-#
+#bindsym <your-keybinding> exec wf-recorder -g "$(slurp)" -o ~/Videos/

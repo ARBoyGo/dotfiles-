@@ -1,0 +1,19 @@
+[Desktop Entry]
+Version=1.0
+Name=Alacritty
+Comment=A fast, cross-platform, OpenGL terminal emulator
+GenericName=Terminal Emulator
+Exec=alacritty
+Icon=Alacritty
+Terminal=false
+Type=Application
+Categories=GTK;System;TerminalEmulator;
+StartupNotify=false
+Actions=preferences;
+X-XFCE-Source=file:///usr/share/applications/xfce4-terminal.desktop
+
+Path=
+
+[Desktop Action preferences]
+Name=Terminal Preferences
+Exec=xfce4-terminal --preferences

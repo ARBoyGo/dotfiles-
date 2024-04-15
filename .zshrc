@@ -97,7 +97,35 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+# alias zshconfig="helix ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
+# alias hx="helix"
+alias nv="nvim"
 source ~/.profile
+
+if [ "${XDG_SESSION_TYPE}" = wayland ]; then
+    export MOZ_ENABLE_WAYLAND=1
+    # For Gimp
+    export GDK_BACKEND=x11
+    # For Java application
+    export _JAVA_AWT_WM_NONREPARENTING=1
+else
+    unset MOZ_ENABLE_WAYLAND
+    unset GDK_BACKEND
+    unset _JAVA_AWT_WM_NONREPARENTING
+fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_compiletion
+
+echo "\e[1;33m"
+echo "    ___    ____  ____              ______     "
+echo "   /   |  / __ \/ __ )____  __  __/ ____/___  "
+echo "  / /| | / /_/ / __  / __ \/ / / / / __/ __ \ "
+echo " / ___ |/ _, _/ /_/ / /_/ / /_/ / /_/ / /_/ / "
+echo "/_/  |_/_/ |_/_____/\____/\__, /\____/\____/  "
+echo "                         /____/               "
+echo "\e[1;31m"
+echo "             - Be friendly, Be kind, Be honest"
+echo "    "

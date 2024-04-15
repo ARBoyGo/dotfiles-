@@ -7,31 +7,25 @@
     "height": 30,
 
   "modules-left": [
-    "custom/launcher",
-    "custom/firefox",
-    "sway/workspaces",
-    "temperature",
-    "sway/window",
+    "memory",
+    "custom/swap",
     "sway/mode",
     ],
  
     "modules-center": [
-        "clock"
-       /* "custom/weather" */
+//    "custom/cava",
+    "clock"
     ],
 
     "modules-right": [
-    "custom/cava",
-    "custom/keyboard-layout",
-    "pulseaudio",
-    "backlight",
-    "memory",
-    "custom/swap",
-    "cpu",
+    "hyprland/window",
+    "hyprland/workspaces",
     "network",
     "battery",
+    "pulseaudio",
+    "backlight",
+    "tray",
     "custom/powermenu",
-    "tray"
     ],
 
   "custom/launcher": {
@@ -40,22 +34,17 @@
     "on-click": "~/.config/wofi/launcher.sh",
     "tooltip": false
   },
-
-  "custom/firefox": {
-    "format": " ",
-    "on-click": "firefox",
-  },
   "sway/workspaces": {
-    "disable-scroll": false,
+    "disable-scroll": true,
         "format": "  {icon}  ",
         //"format":"{icon}",
-        /* "format-icons": {
+/*        "format-icons": {
             "1": "",
             "2": "",
             "3": "",
             "4": "",
             "5": "",
-         } */ 
+         } */
   },
   "sway/mode": {
     "format": "<span style=\"italic\"> {}</span>",
@@ -84,22 +73,28 @@
     "tooltip": false
   },
   "backlight": {
-    "on-scroll-up": "brightnessctl s 10%+",
-    "on-scroll-down": "brightnessctl s 10%-",
+    "device": "intel_backlight",
+    "on-scroll-up": "light -A 5",
+    "on-scroll-down": "light -U 5",
     "format": "{icon} {percent}%",
-    "format-icons": ["󰃚","󰃞","󰃠"]
+    "format-icons": ["","","",""]
   },
   "pulseaudio": {
     "scroll-step": 1,
     "format": "{icon} {volume}%", 
     "format-muted": "󰖁 Muted",
     "format-icons": {
-      "default": ["", "", ""]    },
+      "default": ["", "", "󰕾"]
+    },
+    "states": {
+      "warning": 85,
+    },
     "scroll-step": 1,
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-middle": "pavucontrol",
     "tooltip": false,
   },
-   "battery": {
+  "battery": {
     "interval": 10,
     "states": {
       "warning": 20,
@@ -135,8 +130,10 @@
   },
   "network": {
     "interval": 1,
-    "format-wifi": " {essid}",
-    "format-ethernet": "󰈀  {ifname} ({ipaddr})",
+    /*"format-wifi": " {essid}",*/ 
+    "format-wifi": " ",
+    "format-ethernet": "󰈀 ",
+    // "format-ethernet": "󰈀  {ifname} ({ipaddr})",
     "format-linked": "󰀂 {essid} (No IP)",
     "format-disconnected": "󰖪 Disconnected",
     "tooltip": false,
@@ -156,7 +153,7 @@
   // to use the weather module replace <your_location> with your city or town
   // note: do not use spaces: new york would be newyork
   "custom/weather": {
-    "exec": "~/.config/waybar/scripts/weather.sh Dammam", 
+    "exec": "~/.config/waybar/scripts/weather.sh <your_location>", 
     "return-type": "json",
     "interval": 300,
     },

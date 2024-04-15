@@ -37,7 +37,6 @@ ascii_max_range = 7
 cava -p "$config_file" &
 
 # define a function to update meta_data
-
 update_meta_data() {
     while true; do
         mpv_metadata=$(echo '{ "command": ["get_property", "metadata"] }' | socat - /tmp/mpvsocket 2>/dev/null | jq '.data')
